@@ -1,0 +1,260 @@
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="260dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        android:src="@drawable/worldmap"
+        android:alpha="0.2" 
+        android:contentDescription="World Map"/>
+
+    <Button
+        android:id="@+id/btnRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Refresh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/spinnerRegion"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtGlobNewCasesNumber"
+      />
+
+    <TextView
+        android:id="@+id/txtSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Region:"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerRegion"
+        app:layout_constraintStart_toStartOf="@+id/spinnerRegion" />
+
+    <TextView
+        android:id="@+id/txtTotalNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txtTotalText"
+        app:layout_constraintStart_toStartOf="@+id/txtTotalText"
+        app:layout_constraintTop_toBottomOf="@+id/txtTotalText" />
+
+    <TextView
+        android:id="@+id/txtTotalRecovered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Total Recovered:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/txtTotalNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTotalNumber" />
+
+    <TextView
+        android:id="@+id/txtNewCases"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="New Cases Daily:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTotalRecoveredNumber" />
+
+    <TextView
+        android:id="@+id/txtTotalDeathsNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txtTotalDeaths"
+        app:layout_constraintStart_toStartOf="@+id/txtTotalDeaths"
+        app:layout_constraintTop_toBottomOf="@+id/txtTotalDeaths" />
+
+    <TextView
+        android:id="@+id/txtNewCasesNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txtNewCases"
+        app:layout_constraintStart_toStartOf="@+id/txtNewCases"
+        app:layout_constraintTop_toBottomOf="@+id/txtNewCases" />
+
+    <TextView
+        android:id="@+id/txtTotalRecoveredNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txtTotalRecovered"
+        app:layout_constraintStart_toStartOf="@+id/txtTotalRecovered"
+        app:layout_constraintTop_toBottomOf="@+id/txtTotalRecovered" />
+
+    <TextView
+        android:id="@+id/txtTotalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Total cases:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerRegion" />
+
+    <TextView
+        android:id="@+id/txtTotalDeaths"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Total Deaths:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtTotalNumber"
+        app:layout_constraintTop_toBottomOf="@+id/txtTotalNumber" />
+
+    <TextView
+        android:id="@+id/txtHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Covid 19 Worldwide:"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Total Cases:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHeading" />
+
+    <TextView
+        android:id="@+id/txtGlobTotalNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtC"
+        app:layout_constraintStart_toStartOf="@+id/txtC"
+        app:layout_constraintTop_toBottomOf="@+id/txtC"/>
+
+    <TextView
+        android:id="@+id/txtR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Recovered:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtGlobTotalNumber" />
+
+    <TextView
+        android:id="@+id/txtGlobRecoveredNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtR"
+        app:layout_constraintStart_toStartOf="@+id/txtR"
+        app:layout_constraintTop_toBottomOf="@+id/txtR" />
+
+    <TextView
+        android:id="@+id/txtD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Deaths:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtGlobRecoveredNumber" />
+
+    <TextView
+        android:id="@+id/txtGlobDeathsNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtD"
+        app:layout_constraintStart_toStartOf="@+id/txtD"
+        app:layout_constraintTop_toBottomOf="@+id/txtD" />
+
+    <TextView
+        android:id="@+id/txtN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="New Cases Daily:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtGlobDeathsNumber" />
+
+    <TextView
+        android:id="@+id/txtGlobNewCasesNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtN"
+        app:layout_constraintStart_toStartOf="@+id/txtN"
+        app:layout_constraintTop_toBottomOf="@+id/txtN" />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/aviLoader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btnRefresh"
+        app:layout_constraintEnd_toEndOf="@+id/btnRefresh"
+        app:layout_constraintStart_toStartOf="@+id/btnRefresh"
+        style="@style/AVLoadingIndicatorView"
+        android:visibility="invisible"
+        app:indicatorName="BallPulseIndicator"
+        app:indicatorColor="@color/colorPrimary"
+        />
+    <TextView
+        android:id="@+id/txtBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="90sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnRefresh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerRegion"
+        android:textStyle="bold"
+        android:alpha="0.2"
+        android:textColor="#ff25aae1" />
+
+
+</android.support.constraint.ConstraintLayout>

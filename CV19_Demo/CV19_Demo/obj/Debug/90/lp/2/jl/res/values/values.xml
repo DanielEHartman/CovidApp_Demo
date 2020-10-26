@@ -1,0 +1,1 @@
+<resources><declare-styleable name="SearchableSpinner"><attr format="string" name="hintText" /></declare-styleable><string name="app_name">SearchableSpinnerLibrary</string></resources>
